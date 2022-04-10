@@ -20,6 +20,18 @@ public class FirstTest {
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("eatstreet19");
         driver.findElement(By.xpath("//button[@type='submit'] ")).click();
     }
+    @Test
+    public void TestSignIn2(){
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get("https://eatstreet.com/");
+        Assert.assertTrue(driver.getTitle().contains("EatStreet"));
+        driver.findElement(By.xpath("//a[@id='menu-signin']")).click();
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys("kate.bogdanova@gmail.com");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("eatstreet22");
+        driver.findElement(By.xpath("//button[@type='submit'] ")).click();
+    }
 
     @Test
     public void TestSignin2 (){
