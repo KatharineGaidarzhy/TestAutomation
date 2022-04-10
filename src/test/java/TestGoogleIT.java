@@ -20,6 +20,12 @@ public class TestGoogleIT  extends TestInit {
         Assert.assertTrue(driver.getCurrentUrl().contains("cats"));
     }
 
+    @Test
+    public void googleFox(){
+        String  searchWord = "fox";
+        search(searchWord, searchEngine);
+    }
+
     public void search(String googleWord){
         driver.get(searchEngine);
         driver.findElement(By.xpath("//button[@id='L2AGLb']")).click();
