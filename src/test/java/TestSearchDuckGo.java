@@ -24,9 +24,15 @@ public class TestSearchDuckGo extends TestInit {
         Assert.assertTrue(driver.getCurrentUrl().contains(searchWord));
     }
     @Test
-    public void googleHorse(){
+    public void googleHorse() {
         String searchWord = "cats";
-        search (searchWord);
+        search(searchWord);
+        Assert.assertTrue(driver.getCurrentUrl().contains(searchWord));
+    }
+    @Test
+    public void googleBird(){
+        String searchWord = "bird";
+        search(searchWord);
         Assert.assertTrue(driver.getCurrentUrl().contains(searchWord));
     }
     public void search(String googleWord){
